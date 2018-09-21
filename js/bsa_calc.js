@@ -1,5 +1,5 @@
 function calculate() {
-
+    console.log("its working")
     var female = document.getElementsByName("sex")[1].checked;
     var male = document.getElementsByName("sex")[0].checked;
 
@@ -26,9 +26,11 @@ function calculate() {
 
     var BSA = 0;
 
+
+
     // ==========================================
     // Todo: Perform BSA calculation here
-
+    BSA = Math.sqrt(((height * 2.54) * (weight * 0.454))/ 3600);
     // -------------------------------
     // Ideal Body Weight (IBW)
     // -------------------------------
@@ -39,12 +41,14 @@ function calculate() {
 
         // ==========================================
         // Todo: Perform female IBW calculation here
+        IBW = 45.5 + 2.3 * (height - 60);
 
 
     } else if ( male ) {
 
         // ==========================================
         // Todo: Perform male IBW calculation here
+        IBW = 50 + 2.3 * (height- 60);
 
     }
 
@@ -56,6 +60,7 @@ function calculate() {
 
     // ==========================================
     // Todo: Perform BMI calculation here
+    BMI = (weight * 0.454) / Math.pow((height * 0.0254), 2);
 
 
 
